@@ -1,0 +1,88 @@
+@startuml
+
+abstract class Extra {
+    -String nombre
+    +Extra(String nombre)
+    +String ver()
+}
+
+abstract class Queso extends Extra {
+    +Queso(String nombre)
+}
+
+class QuesoCheddar extends Queso {
+    +QuesoCheddar()
+}
+
+class QuesoAzul extends Queso {
+    +QuesoAzul()
+}
+
+class Salsa extends Extra {
+    +Salsa(String nombre)
+}
+
+class Mayonesa extends Salsa {
+    +Mayonesa()
+}
+
+class Ketchup extends Salsa {
+    +Ketchup()
+}
+
+class Huevo extends Extra {
+    +Huevo()
+}
+
+abstract class Carne {
+    -String nombre
+    +Carne(String nombre)
+    +String ver()
+}
+
+class Res extends Carne {
+    +Res()
+}
+
+class Pollo extends Carne {
+    +Pollo()
+}
+
+abstract class Pan {
+    -String nombre
+    +Pan(String nombre)
+    +String ver()
+}
+
+class Brioche extends Pan {
+    +Brioche()
+}
+
+class Integral extends Pan {
+    +Integral()
+}
+
+class Hamburguesa {
+    -Pan[] panes
+    -Carne carne
+    -Extra[] extras
+    -int extrasAgregados
+    +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras)
+    +void agregarExtra(Extra extra)
+    +void ver()
+}
+
+class Cocinero {
+    +void prepararHamburguesa()
+    +static void main(String[] args)
+}
+
+Cocinero --> Pan
+Cocinero --> Carne
+Cocinero --> Extra
+Cocinero --> Hamburguesa
+Hamburguesa *-- Pan
+Hamburguesa *-- Carne
+Hamburguesa *-- Extra
+
+@enduml

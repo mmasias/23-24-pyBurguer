@@ -1,13 +1,5 @@
-
-public class Salsa {
-
-    private String nombre;
-
+public class Salsa extends Extra {
     public Salsa(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String ver(){
-        return this.nombre;
+        super(nombre);
     }
 }

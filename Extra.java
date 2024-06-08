@@ -1,13 +1,12 @@
+public abstract class Extra {
 
-public class Extra {
+    private String nombre;
 
-    public Extra(String string) {
-        //TODO Auto-generated constructor stub
+    public Extra(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void ver() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ver'");
+    public String ver() {
+        return nombre;
     }
-
 }

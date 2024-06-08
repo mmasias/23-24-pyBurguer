@@ -1,14 +1,12 @@
+public abstract class Pan {
 
-public class Pan {
+    private String nombre;
 
-    private String descriptor;
-
-    public Pan(String descriptor) {
-        this.descriptor = descriptor;
+    public Pan(String nombre) {
+        this.nombre = nombre;
     }
 
     public String ver() {
-        return descriptor;
+        return nombre;
     }
-
 }
