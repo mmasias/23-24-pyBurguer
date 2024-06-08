@@ -1,15 +1,16 @@
+package src;
+
 public class Cocinero {
 
     public void prepararHamburguesa() {
-        
         Pan panSuperior = new Brioche();
         Pan panInferior = new Brioche();
-        Carne res = new Res();
+        Carne res = new Res("hecha");
         Hamburguesa hamburguesa = new Hamburguesa(panSuperior, panInferior, res, 4);
 
         Extra quesoCheddar = new QuesoCheddar();
-        Extra ketchup = new Ketchup();
-        Extra mayonesa = new Mayonesa();
+        Extra ketchup = new Ketchup("medio");
+        Extra mayonesa = new Mayonesa("mucho");
         Extra huevo = new Huevo();
 
         hamburguesa.agregarExtra(quesoCheddar);

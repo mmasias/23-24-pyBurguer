@@ -1,3 +1,5 @@
+package src;
+
 public class Hamburguesa {
 
     private Pan[] panes;
@@ -22,11 +24,11 @@ public class Hamburguesa {
     }
 
     public void ver() {
-        System.out.println(panes[0].ver());
-        System.out.println(carne.ver());
+        panes[0].mostrar();
+        carne.mostrar();
         for (int i = 0; i < extrasAgregados; i++) {
-            System.out.println(extras[i].ver());
+            extras[i].mostrar();
         }
-        System.out.println(panes[1].ver());
+        panes[1].mostrar();
     }
 }

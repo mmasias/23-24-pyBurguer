@@ -1,3 +1,4 @@
+package src;
 public abstract class Extra {
 
     private String nombre;
@@ -9,4 +10,6 @@ public abstract class Extra {
     public String ver() {
         return nombre;
     }
+
+    public abstract void mostrar();
 }

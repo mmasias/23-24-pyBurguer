@@ -4,6 +4,7 @@ abstract class Extra {
     -String nombre
     +Extra(String nombre)
     +String ver()
+    +void mostrar()
 }
 
 abstract class Queso extends Extra {
@@ -12,54 +13,69 @@ abstract class Queso extends Extra {
 
 class QuesoCheddar extends Queso {
     +QuesoCheddar()
+    +void mostrar()
 }
 
 class QuesoAzul extends Queso {
     +QuesoAzul()
+    +void mostrar()
 }
 
 class Salsa extends Extra {
-    +Salsa(String nombre)
+    -String cantidad
+    +Salsa(String nombre, String cantidad)
+    +String ver()
+    +void mostrar()
 }
 
 class Mayonesa extends Salsa {
-    +Mayonesa()
+    +Mayonesa(String cantidad)
+    +void mostrar()
 }
 
 class Ketchup extends Salsa {
-    +Ketchup()
+    +Ketchup(String cantidad)
+    +void mostrar()
 }
 
 class Huevo extends Extra {
     +Huevo()
+    +void mostrar()
 }
 
 abstract class Carne {
     -String nombre
-    +Carne(String nombre)
+    -String coccion
+    +Carne(String nombre, String coccion)
     +String ver()
+    +void mostrar()
 }
 
 class Res extends Carne {
-    +Res()
+    +Res(String coccion)
+    +void mostrar()
 }
 
 class Pollo extends Carne {
-    +Pollo()
+    +Pollo(String coccion)
+    +void mostrar()
 }
 
 abstract class Pan {
     -String nombre
     +Pan(String nombre)
     +String ver()
+    +void mostrar()
 }
 
 class Brioche extends Pan {
     +Brioche()
+    +void mostrar()
 }
 
 class Integral extends Pan {
     +Integral()
+    +void mostrar()
 }
 
 class Hamburguesa {

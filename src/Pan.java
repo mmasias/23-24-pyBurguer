@@ -1,3 +1,4 @@
+package src;
 public abstract class Pan {
 
     private String nombre;
@@ -9,4 +10,6 @@ public abstract class Pan {
     public String ver() {
         return nombre;
     }
+
+    public abstract void mostrar();
 }
