@@ -14,4 +14,8 @@ public abstract class Carne {
     }
 
     public abstract void mostrar();
+
+    public String describir() {
+        return nombre + " (" + coccion + ")";
+    }
 }

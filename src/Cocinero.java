@@ -5,7 +5,7 @@ public class Cocinero {
     public void prepararHamburguesa() {
         Pan panSuperior = new Brioche();
         Pan panInferior = new Brioche();
-        Carne res = new Res("hecha");
+        Carne res = new Res("poco hecha");
         Hamburguesa hamburguesa = new Hamburguesa(panSuperior, panInferior, res, 4);
 
         Extra quesoCheddar = new QuesoCheddar();
@@ -18,7 +18,8 @@ public class Cocinero {
         hamburguesa.agregarExtra(mayonesa);
         hamburguesa.agregarExtra(huevo);
 
-        hamburguesa.ver();
+        hamburguesa.mostrar();
+        hamburguesa.describir();
     }
 
     public static void main(String[] args) {

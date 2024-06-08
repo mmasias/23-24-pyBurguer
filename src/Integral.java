@@ -6,6 +6,6 @@ public class Integral extends Pan {
 
     @Override
     public void mostrar() {
-        System.out.println("#############");
+        System.out.println("|".repeat(14));
     }
 }

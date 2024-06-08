@@ -5,6 +5,7 @@ abstract class Extra {
     +Extra(String nombre)
     +String ver()
     +void mostrar()
+    +String describir()
 }
 
 abstract class Queso extends Extra {
@@ -26,6 +27,7 @@ class Salsa extends Extra {
     +Salsa(String nombre, String cantidad)
     +String ver()
     +void mostrar()
+    +String describir()
 }
 
 class Mayonesa extends Salsa {
@@ -49,6 +51,7 @@ abstract class Carne {
     +Carne(String nombre, String coccion)
     +String ver()
     +void mostrar()
+    +String describir()
 }
 
 class Res extends Carne {
@@ -66,6 +69,7 @@ abstract class Pan {
     +Pan(String nombre)
     +String ver()
     +void mostrar()
+    +String describir()
 }
 
 class Brioche extends Pan {
@@ -85,7 +89,8 @@ class Hamburguesa {
     -int extrasAgregados
     +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras)
     +void agregarExtra(Extra extra)
-    +void ver()
+    +void mostrar()
+    +void describir()
 }
 
 class Cocinero {
@@ -96,7 +101,7 @@ class Cocinero {
 Cocinero --> Pan
 Cocinero --> Carne
 Cocinero --> Extra
-Cocinero --> Hamburguesa
+Cocinero -l-> Hamburguesa
 Hamburguesa *-- Pan
 Hamburguesa *-- Carne
 Hamburguesa *-- Extra

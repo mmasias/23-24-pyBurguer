@@ -6,6 +6,6 @@ public class Mayonesa extends Salsa {
 
     @Override
     public void mostrar() {
-        System.out.println("~~~~~~~~~~~");
+        System.out.println(" " + "~=~".repeat(4));
     }
 }

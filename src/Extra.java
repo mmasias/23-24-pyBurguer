@@ -12,4 +12,8 @@ public abstract class Extra {
     }
 
     public abstract void mostrar();
+
+    public String describir() {
+        return nombre;
+    }
 }

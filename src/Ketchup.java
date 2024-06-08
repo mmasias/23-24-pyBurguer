@@ -6,6 +6,6 @@ public class Ketchup extends Salsa {
 
     @Override
     public void mostrar() {
-        System.out.println("~~~~~~~~~~~");
+        System.out.println(" " + "ooO".repeat(4));
     }
 }

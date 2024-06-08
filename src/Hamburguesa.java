@@ -23,12 +23,20 @@ public class Hamburguesa {
         }
     }
 
-    public void ver() {
+    public void mostrar() {
         panes[0].mostrar();
         carne.mostrar();
         for (int i = 0; i < extrasAgregados; i++) {
             extras[i].mostrar();
         }
         panes[1].mostrar();
+    }
+
+    public void describir() {    
+        System.out.print (panes[0].describir() + ", " + carne.describir());
+        for (int i = 0; i < extrasAgregados; i++) {
+            System.out.print(", " + extras[i].describir());
+        }
+        System.out.println();
     }
 }

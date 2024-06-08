@@ -15,6 +15,11 @@ public class Salsa extends Extra {
 
     @Override
     public void mostrar() {
-        System.out.println("~~~~~~~~~~~");
+        System.out.println(" " + "~".repeat(12));
+    }
+
+    @Override
+    public String describir() {
+        return super.describir() + " (" + cantidad + ")";
     }
 }
