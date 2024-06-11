@@ -1,29 +1,20 @@
 package src;
 
-public class Cocinero {
+class Cocinero extends Empleado {
 
     public void prepararHamburguesa() {
-        Pan panSuperior = new Brioche();
-        Pan panInferior = new Brioche();
-        Carne res = new Res("poco hecha");
-        Hamburguesa hamburguesa = new Hamburguesa(panSuperior, panInferior, res, 4);
+        Carne laCarne = new Res("poco hecha");
+        hamburguesa = new Hamburguesa(new Brioche(), new Brioche(), laCarne, 4);
 
-        Extra quesoCheddar = new QuesoCheddar();
-        Extra ketchup = new Ketchup("medio");
-        Extra mayonesa = new Mayonesa("mucho");
-        Extra huevo = new Huevo();
-
-        hamburguesa.agregarExtra(quesoCheddar);
-        hamburguesa.agregarExtra(ketchup);
-        hamburguesa.agregarExtra(mayonesa);
-        hamburguesa.agregarExtra(huevo);
-
-        hamburguesa.mostrar();
-        hamburguesa.describir();
+        hamburguesa.agregarExtra(new Cheddar());
+        hamburguesa.agregarExtra(new Ketchup("poco"));
+        hamburguesa.agregarExtra(new Mayonesa("mucho"));
+        hamburguesa.agregarExtra(new Huevo());
+        this.tieneHamburguesa = true;
     }
 
-    public static void main(String[] args) {
-        Cocinero bobEsponja = new Cocinero();
-        bobEsponja.prepararHamburguesa();
+    public Hamburguesa entregar() {
+        this.tieneHamburguesa = false;
+        return hamburguesa;
     }
 }

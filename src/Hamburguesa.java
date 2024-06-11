@@ -1,7 +1,6 @@
 package src;
 
-public class Hamburguesa {
-
+class Hamburguesa {
     private Pan[] panes;
     private Carne carne;
     private Extra[] extras;
@@ -32,11 +31,13 @@ public class Hamburguesa {
         panes[1].mostrar();
     }
 
-    public void describir() {    
-        System.out.print (panes[0].describir() + ", " + carne.describir());
+    public String describir() {   
+        String descripcion; 
+        descripcion = panes[0].describir() + ", " + carne.describir();
         for (int i = 0; i < extrasAgregados; i++) {
-            System.out.print(", " + extras[i].describir());
+            descripcion = descripcion + ", " + extras[i].describir();
         }
-        System.out.println();
+        descripcion = descripcion + "\n";
+        return descripcion;
     }
 }

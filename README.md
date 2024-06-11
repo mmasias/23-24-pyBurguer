@@ -1,5 +1,11 @@
 # Una hamburguesa
 
-![](/images/theBurguer.webp)
+<div align=center>
 
-![](/images/modelosUML/modelosUML/modelo.svg)
+||
+|:-:|
+![](/images/theBurguer.webp)
+![](/images/modelosUML/modelosUML/modelo2.svg)
+![](/images/modelosUML/modelosUML/modelo3.svg)
+
+</div>

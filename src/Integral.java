@@ -1,5 +1,5 @@
 package src;
-public class Integral extends Pan {
+class Integral extends Pan {
     public Integral() {
         super("Integral");
     }

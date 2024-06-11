@@ -1,0 +1,19 @@
+@startuml
+
+abstract Empleado
+class Camarero {
+    + void recibir(Hamburguesa hamburguesa)
+    + void servir()
+}
+class Cocinero{
+    + void prepararHamburguesa()
+    + Hamburguesa entregar() 
+}
+
+Camarero -u-|> Empleado
+Cocinero -u-|> Empleado
+
+Restaurante *-r- Cocinero
+Restaurante *-l- Camarero
+
+@enduml

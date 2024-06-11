@@ -1,6 +1,6 @@
 package src;
-public class QuesoAzul extends Queso {
-    public QuesoAzul() {
+class Azul extends Queso {
+    public Azul() {
         super("Queso Azul");
     }
 

@@ -1,8 +1,7 @@
 package src;
-
-public class QuesoCheddar extends Queso {
-    public QuesoCheddar() {
-        super("Queso Cheddar");
+ class Cheddar extends Queso {
+    public Cheddar() {
+        super("Cheddar");
     }
 
     @Override

@@ -1,5 +1,5 @@
 package src;
-public class Pollo extends Carne {
+class Pollo extends Carne {
     public Pollo(String coccion) {
         super("Pollo", coccion);
     }

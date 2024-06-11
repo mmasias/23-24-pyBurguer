@@ -1,0 +1,78 @@
+@startuml
+
+abstract Ingrediente{
+    # nombre
+    + String describir()
+    {abstract} void mostrar()
+}
+
+abstract Pan extends Ingrediente {
+    # Pan(String nombre) 
+}
+
+class Integral extends Pan {
+    + Integral()
+    + void mostrar()
+}
+
+class Brioche extends Pan {
+    + Brioche()
+    + void mostrar()
+}
+
+abstract Carne extends Ingrediente{
+    # String coccion
+    # Carne(String nombre, String coccion)
+    + String describir()
+}
+
+class Res extends Carne{
+    + Res(String coccion)
+    + void mostrar()
+}
+
+class Pollo extends Carne{
+    + Pollo(String coccion)
+    + void mostrar()
+}
+
+abstract Extra extends Ingrediente{
+    # Extra(String nombre) 
+}
+
+abstract Queso extends Extra{
+    # Queso(String nombre)
+}
+
+class Cheddar extends Queso{
+    + Cheddar()
+    + void mostrar()
+}
+
+class Azul extends Queso{
+    + Azul()
+    + void mostrar()    
+}
+
+class Huevo extends Extra{
+    + Huevo()
+    + void mostrar()      
+}
+
+abstract Salsa extends Extra{
+    - String cantidad
+    # Salsa(String nombre, String cantidad)
+    + String describir()
+}
+
+class Mayonesa extends Salsa{
+    + Mayonesa(String cantidad)
+    + void mostrar()
+}
+
+class Ketchup extends Salsa{
+    + Ketchup(String cantidad)
+    + void mostrar()    
+}
+
+@enduml

@@ -1,7 +1,5 @@
 package src;
-public abstract class Carne {
-
-    private String nombre;
+abstract class Carne extends Ingrediente {
     private String coccion;
 
     public Carne(String nombre, String coccion) {
@@ -9,13 +7,9 @@ public abstract class Carne {
         this.coccion = coccion;
     }
 
-    public String ver() {
-        return nombre + " (" + coccion + ")";
-    }
-
-    public abstract void mostrar();
-
     public String describir() {
         return nombre + " (" + coccion + ")";
     }
+
+    public abstract void mostrar();    
 }

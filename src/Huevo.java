@@ -1,6 +1,5 @@
 package src;
-
-public class Huevo extends Extra {
+class Huevo extends Extra {
     public Huevo() {
         super("Huevo frito");
     }

@@ -1,7 +1,6 @@
 package src;
-
-public abstract class Queso extends Extra {
-    public Queso(String nombre) {
+abstract class Queso extends Extra {
+    protected Queso(String nombre) {
         super(nombre);
     }
 }

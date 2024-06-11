@@ -1,5 +1,6 @@
 package src;
-public class Ketchup extends Salsa {
+class Ketchup extends Salsa {
+
     public Ketchup(String cantidad) {
         super("Ketchup", cantidad);
     }

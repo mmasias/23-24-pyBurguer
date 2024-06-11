@@ -1,5 +1,5 @@
 package src;
-public class Res extends Carne {
+class Res extends Carne {
     public Res(String coccion) {
         super("Res", coccion);
     }
