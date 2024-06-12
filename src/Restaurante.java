@@ -1,8 +1,9 @@
 package src;
 
-class CrustaceoCrujiente {
+class Restaurante {
 
-    public static void main(String[] args) {
+    private void atender() {
+
         Cocinero bobEsponja = new Cocinero();
         Camarero calamardo = new Camarero();
         
@@ -10,5 +11,9 @@ class CrustaceoCrujiente {
         calamardo.recibir(bobEsponja.entregar());
 
         calamardo.servir();
+    }
+    public static void main(String[] args) {
+        Restaurante crustaceoCrujiente = new Restaurante();
+        crustaceoCrujiente.atender();
     }
 }
