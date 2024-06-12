@@ -6,6 +6,6 @@ class Huevo extends Extra {
 
     @Override
     public void mostrar() {
-        System.out.println(" ----(  )----");
+        System.out.println(" ~-~-(  )~-~-");
     }
 }
