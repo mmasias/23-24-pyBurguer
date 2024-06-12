@@ -6,6 +6,6 @@ class Pollo extends Carne {
 
     @Override
     public void mostrar() {
-        System.out.println(" " + ":".repeat(12));
+        System.out.println(" " + ";".repeat(12));
     }
 }
