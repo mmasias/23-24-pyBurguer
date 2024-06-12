@@ -6,6 +6,8 @@ Cuando el cocinero recibe la orden de preparar una hamburguesa, selecciona los i
 
 Una vez preparada, entrega la hamburguesa al camarero, que es el encargado de servirla al cliente. En el proceso de entrega, describe los componentes de la hamburguesa en voz alta para que el cliente sepa exactamente lo que está recibiendo, y luego de esto, muestra la hamburguesa.
 
+<div align=center>
+
 |Ingrediente|||Representación|
 |-|-|-|-|
 |**Pan**|Brioche||`##############`
@@ -19,6 +21,8 @@ Una vez preparada, entrega la hamburguesa al camarero, que es el encargado de se
 ||*Admiten cantidad:*||*Mucho, poco*
 ||Salsa Mayonesa||`~=~~=~~=~~=~`
 ||Salsa Ketchup||`ooOooOooOooO`
+
+</div>
 
 ```
 
