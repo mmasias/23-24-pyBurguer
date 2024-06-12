@@ -26,7 +26,7 @@ Diseñe y programe un sistema de software que modele todo este proceso en el 'Cr
 |**Extras**|Queso Cheddar||`============`
 ||Queso Azul||`-.-.-.-.-.-.`
 ||Huevo||`~-~-(  )~-~-`
-||*Admiten cantidad*||*Mucho, poco*
+||*Admiten cantidad:*||*Mucho, poco*
 ||Salsa Mayonesa||`~=~~=~~=~~=~`
 ||Salsa Ketchup||`ooOooOooOooO`
 
