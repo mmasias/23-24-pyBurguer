@@ -1,6 +1,6 @@
 package src;
 class Brioche extends Pan {
-    final String REPRESENTACION = "#".repeat(14)
+    final String REPRESENTACION = "#".repeat(14);
 
     public Brioche() {
         super("Brioche");
