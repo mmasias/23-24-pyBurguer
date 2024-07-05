@@ -1,39 +1,43 @@
 package src;
 
 class Hamburguesa {
-    private Pan[] panes;
-    private Carne carne;
-    private Extra[] extras;
-    private int extrasAgregados;
-
-    public Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras) {
-        this.panes = new Pan[]{panSuperior, panInferior};
-        this.carne = carne;
-        this.extras = new Extra[numeroExtras];
-        this.extrasAgregados = 0;
+    private ListaIngredientes ingredientes;
+    
+    public Hamburguesa() {
+        this.ingredientes = new ListaIngredientes();
+    }
+    
+    public void agregarIngrediente(Ingrediente ingrediente) {
+        ingredientes.agregar(ingrediente);
+    }
+    
+    public void agregarIngrediente(Ingrediente ingrediente, int posicion) {
+        ingredientes.agregar(ingrediente, posicion);
+    }
+    
+    public void quitarIngrediente(int posicion) {
+        ingredientes.quitar(posicion);
     }
 
-    public void agregarExtra(Extra extra) {
-            extras[extrasAgregados] = extra;
-            extrasAgregados++;
-    }
+    public Ingrediente verIngrediente(int posicion) {
+        return ingredientes.obtener(posicion);
+    }    
 
+    public void reorganizarIngredientes(int de, int a) {
+        ingredientes.reorganizar(de, a);
+    }
+    
     public void mostrar() {
-        panes[0].mostrar();
-        carne.mostrar();
-        for (int i = 0; i < extrasAgregados; i++) {
-            extras[i].mostrar();
+        for (int i = 0; i < ingredientes.tamaño(); i++) {
+            ingredientes.obtener(i).mostrar();
         }
-        panes[1].mostrar();
     }
-
-    public String describir() {   
-        String descripcion; 
-        descripcion = panes[0].describir() + ", " + carne.describir();
-        for (int i = 0; i < extrasAgregados; i++) {
-            descripcion = descripcion + ", " + extras[i].describir();
+    
+    public String describir() {
+        String descripcion = "Hamburguesa de ";
+        for (int i = 0; i < ingredientes.tamaño(); i++) {
+            descripcion = descripcion + ", " + ingredientes.obtener(i).describir();
         }
-        descripcion = descripcion + "\n";
         return descripcion;
     }
 }
