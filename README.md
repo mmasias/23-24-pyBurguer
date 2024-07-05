@@ -40,86 +40,9 @@ Sale una Brioche, Res (poco hecha), Cheddar, poco de Ketchup, mucho de Mayonesa,
 
 ```
 
-## 2DO - PRG2
+|PRG1|PRG2|EDA1|EDA2|
+|-|-|-|-|
+[Test](testPRG1.md)|[Test](testPRG2.md)|[Test](testEDA1.md)|[Test](testEDA2.md)|
 
-Diseñe y programe un sistema que modele todo este proceso, considerando las responsabilidades del cocinero y del camarero, así como las distintas características, relaciones y comportamientos de los ingredientes involucrados en la preparación de las hamburguesas.
 
-### Legacy
 
-¡No parte de cero! Se ha conseguido acceso al siguiente fragmento de código, al cual se agregará el código que presente.
-
-```java
-class Restaurante {
-
-    private void atender() {
-
-        Cocinero bobEsponja = new Cocinero();
-        Camarero calamardo = new Camarero();
-        
-        bobEsponja.prepararHamburguesa();
-        calamardo.recibir(bobEsponja.entregar());
-
-        calamardo.servir();
-    }
-    public static void main(String[] args) {
-        Restaurante crustaceoCrujiente = new Restaurante();
-        crustaceoCrujiente.atender();
-    }
-}
-
-class Cocinero extends Empleado {
-
-    public void prepararHamburguesa() {
-        final int NUMERO_EXTRAS = 4;
-        Carne laCarne = new Res("poco hecha");
-        hamburguesa = new Hamburguesa(new Brioche(), new Brioche(), laCarne, NUMERO_EXTRAS);
-
-        hamburguesa.agregarExtra(new Cheddar());
-        hamburguesa.agregarExtra(new Ketchup("poco"));
-        hamburguesa.agregarExtra(new Mayonesa("mucho"));
-        hamburguesa.agregarExtra(new Huevo());
-        this.tieneHamburguesa = true;
-    }
-
-    public Hamburguesa entregar() {
-        this.tieneHamburguesa = false;
-        return hamburguesa;
-    }
-}
-
-abstract class Empleado {
-    protected Hamburguesa hamburguesa;
-    protected boolean tieneHamburguesa;
-
-    public Empleado() {
-        this.tieneHamburguesa = false;
-    }
-}
-```
-
-## 2DO - EDA2
-
-- Parte 1 - _in plan english_
-- Parte 2 - Dev...
-
-### Caso
-
-#### Validación de hamburguesas
-
-Adicionalmente, el restaurante ha implementado un nuevo sistema de control de calidad para garantizar que las hamburguesas entregadas a los clientes sean **exactamente** las que se prepararon originalmente. Por lo tanto, se requiere que la solución incluya un mecanismo de validación para las hamburguesas creadas.
-
-Específicamente, después de que un cocinero prepara una hamburguesa y antes de entregarla al empleado encargado de servir, se debe generar un código de validación único para esa hamburguesa. Este código de validación debe ser calculado en función de los ingredientes y características de la hamburguesa, de tal manera que cualquier cambio en los componentes de la hamburguesa resultaría en un código de validación diferente.
-
-Cuando el empleado recibe la hamburguesa del cocinero, debe verificar que el código de validación coincida con el generado inicialmente. Si el código de validación no coincide, significa que la hamburguesa ha sido alterada y no debe ser servida al cliente.
-
-Implemente el mecanismo pertinente para generar el código de validación que garantice la integridad y unicidad del código generado. Deje un caso de uso que permita validar dicho mecanismo.
-
-#### Extensión de línea de negocio
-
-Además de las populares hamburguesas, el restaurante ha decidido ampliar su menú e incluir kebabs. Un kebab es una pila de diferentes carnes que se van cortando y sirviendo a los clientes.
-
-En previsión de esta extensión, hay que ajustar la solución para permitir la preparación y validación de kebabs. Al igual que con las hamburguesas, se requiere implementar un mecanismo de validación para garantizar que los kebabs entregados a los clientes sean **exactamente** los que se prepararon originalmente.
-
-Antes de servir el kebab al cliente, el empleado debe verificar que es el entregado por el cocinero.
-
-Proponga el modelado y el mecanismo pertinente para garantizar la integridad y unicidad del kebab preparado. 
